@@ -86,23 +86,6 @@ endif; // wp_talon_setup
 add_action( 'after_setup_theme', 'wp_talon_setup' );
 
 /**
- * Register widgetized area and update sidebar with default widgets
- *
- * @since WP Talon 1.0
- */
-function wp_talon_widgets_init() {
-	register_sidebar( array(
-		'name' => __( 'Sidebar', 'wp_talon' ),
-		'id' => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h1 class="widget-title">',
-		'after_title' => '</h1>',
-	) );
-}
-add_action( 'widgets_init', 'wp_talon_widgets_init' );
-
-/**
  * Enqueue scripts and styles
  */
 function wp_talon_scripts() {
@@ -124,3 +107,8 @@ add_action( 'wp_enqueue_scripts', 'wp_talon_scripts' );
  * Implement the Custom Header feature
  */
 //require( get_template_directory() . '/inc/custom-header.php' );
+
+/**
+ * Implement the Custom Header feature
+ */
+require( get_template_directory() . '/inc/widget-areas.php' );

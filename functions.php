@@ -14,6 +14,16 @@
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
 
+/**
+ * WP Head Cleaner
+ */
+function removeHeadLinks() {
+   	remove_action('wp_head', 'rsd_link');
+   	remove_action('wp_head', 'wlwmanifest_link');
+   	remove_action('wp_head', 'wp_generator');
+}
+add_action('init', 'removeHeadLinks');
+
 if ( ! function_exists( 'wp_talon_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.

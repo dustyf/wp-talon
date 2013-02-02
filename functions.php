@@ -106,9 +106,9 @@ add_action( 'wp_enqueue_scripts', 'wp_talon_scripts' );
 /**
  * Implement the Custom Header feature
  */
-//require( get_template_directory() . '/inc/custom-header.php' );
+//include( get_template_directory() . '/inc/custom-header.php' );
 
 /**
- * Implement the Custom Header feature
+ * Include Widget Areas
  */
-require( get_template_directory() . '/inc/widget-areas.php' );
+include( get_template_directory() . '/inc/widget-areas.php' );

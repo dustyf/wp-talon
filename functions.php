@@ -140,3 +140,7 @@ function disable_all_feeds() {
 //remove_action( 'wp_head', 'feed_links_extra', 3 ); 
 //remove_action( 'wp_head', 'feed_links', 2 );
 
+/**
+ * Disable theme file editing
+ */
+define('DISALLOW_FILE_EDIT',true);

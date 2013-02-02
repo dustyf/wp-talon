@@ -74,6 +74,7 @@ function wp_talon_setup() {
 	 */
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'wp_talon' ),
+		'footer' => __( 'Footer Menu', 'wp_talon' ),
 	) );
 
 	/**

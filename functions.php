@@ -112,3 +112,8 @@ add_action( 'wp_enqueue_scripts', 'wp_talon_scripts' );
  * Include Widget Areas
  */
 include( get_template_directory() . '/inc/widget-areas.php' );
+
+/**
+ * Include Images Sizes
+ */
+include( get_template_directory() . '/inc/image-sizes.php' );

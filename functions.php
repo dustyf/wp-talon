@@ -122,3 +122,21 @@ include( get_template_directory() . '/inc/widget-areas.php' );
  * Include Images Sizes
  */
 include( get_template_directory() . '/inc/image-sizes.php' );
+
+function disable_all_feeds() {
+   wp_die( __('Sorry, our content is not available by RSS. Please head over to <a href="'. get_bloginfo('url') .'">our site</a>') );
+}
+
+
+/**
+ * To Disable RSS Feeds, uncomment the below lines
+ */
+
+//add_action('do_feed', 'disable_all_feeds', 1);
+//add_action('do_feed_rdf', 'disable_all_feeds', 1);
+//add_action('do_feed_rss', 'disable_all_feeds', 1);
+//add_action('do_feed_rss2', 'disable_all_feeds', 1);
+//add_action('do_feed_atom', 'disable_all_feeds', 1);
+//remove_action( 'wp_head', 'feed_links_extra', 3 ); 
+//remove_action( 'wp_head', 'feed_links', 2 );
+

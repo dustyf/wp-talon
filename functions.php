@@ -95,7 +95,7 @@ function wp_talon_scripts() {
 	wp_enqueue_style( 'normalize' );
 
 	wp_register_style( 'unsemantic', get_template_directory_uri() . '/css/unsemantic-grid-responsive.css', array(), '20130204', 'all' );
-	wp_enqueue_style( 'unsematic' );
+	wp_enqueue_style( 'unsemantic' );
 
 	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 

@@ -126,6 +126,11 @@ include( get_template_directory() . '/inc/widget-areas.php' );
  */
 include( get_template_directory() . '/inc/image-sizes.php' );
 
+/**
+ * Include Custom Fields
+ */
+include( get_template_directory() . '/inc/custom-fields.php' );
+
 function disable_all_feeds() {
    wp_die( __('Sorry, our content is not available by RSS. Please head over to <a href="'. get_bloginfo('url') .'">our site</a>') );
 }

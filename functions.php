@@ -14,16 +14,6 @@
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
 
-/**
- * WP Head Cleaner
- */
-function removeHeadLinks() {
-   	remove_action('wp_head', 'rsd_link');
-   	remove_action('wp_head', 'wlwmanifest_link');
-   	remove_action('wp_head', 'wp_generator');
-}
-add_action('init', 'removeHeadLinks');
-
 if ( ! function_exists( 'wp_talon_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -131,24 +121,9 @@ include( get_template_directory() . '/inc/image-sizes.php' );
  */
 include( get_template_directory() . '/inc/custom-fields.php' );
 
-function disable_all_feeds() {
-   wp_die( __('Sorry, our content is not available by RSS. Please head over to <a href="'. get_bloginfo('url') .'">our site</a>') );
-}
-
-
 /**
- * To Disable RSS Feeds, uncomment the below lines
+ * Include WP Cleanup File
  */
+// include( get_template_directory() . '/inc/wp-cleanup.php' );
 
-//add_action('do_feed', 'disable_all_feeds', 1);
-//add_action('do_feed_rdf', 'disable_all_feeds', 1);
-//add_action('do_feed_rss', 'disable_all_feeds', 1);
-//add_action('do_feed_rss2', 'disable_all_feeds', 1);
-//add_action('do_feed_atom', 'disable_all_feeds', 1);
-//remove_action( 'wp_head', 'feed_links_extra', 3 ); 
-//remove_action( 'wp_head', 'feed_links', 2 );
 
-/**
- * Disable theme file editing
- */
-define('DISALLOW_FILE_EDIT',true);

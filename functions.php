@@ -121,9 +121,4 @@ include( get_template_directory() . '/inc/image-sizes.php' );
  */
 include( get_template_directory() . '/inc/custom-fields.php' );
 
-/**
- * Include WP Cleanup File
- */
-// include( get_template_directory() . '/inc/wp-cleanup.php' );
-
 

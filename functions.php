@@ -112,7 +112,7 @@ add_action( 'wp_enqueue_scripts', 'wp_talon_scripts' );
 include( get_template_directory() . '/inc/widget-areas.php' );
 
 /**
- * Include Images Sizes
+ * Include Image Sizes
  */
 include( get_template_directory() . '/inc/image-sizes.php' );
 

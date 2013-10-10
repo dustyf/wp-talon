@@ -124,4 +124,8 @@ include( get_template_directory() . '/inc/image-sizes.php' );
  */
 include( get_template_directory() . '/inc/custom-fields.php' );
 
+/**
+ * Include Theme Hook Alliance
+ */
+include( get_template_directory() . '/inc/tha-theme-hooks.php' );
 

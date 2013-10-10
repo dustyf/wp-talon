@@ -5,14 +5,11 @@
  * Eventually, some of the functionality here could be replaced by core features
  *
  * @package WP Talon
- * @since WP Talon 1.0
  */
 
 if ( ! function_exists( 'wp_talon_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
- *
- * @since WP Talon 1.0
  */
 function wp_talon_content_nav( $nav_id ) {
 	global $wp_query, $post;
@@ -65,8 +62,6 @@ if ( ! function_exists( 'wp_talon_comment' ) ) :
  * Template for comments and pingbacks.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
- *
- * @since WP Talon 1.0
  */
 function wp_talon_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
@@ -119,8 +114,6 @@ endif; // ends check for wp_talon_comment()
 if ( ! function_exists( 'wp_talon_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
- *
- * @since WP Talon 1.0
  */
 function wp_talon_posted_on() {
 	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'wp_talon' ),
@@ -137,8 +130,6 @@ endif;
 
 /**
  * Returns true if a blog has more than 1 category
- *
- * @since WP Talon 1.0
  */
 function wp_talon_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
@@ -164,8 +155,6 @@ function wp_talon_categorized_blog() {
 
 /**
  * Flush out the transients used in wp_talon_categorized_blog
- *
- * @since WP Talon 1.0
  */
 function wp_talon_category_transient_flusher() {
 	// Like, beat it. Dig?

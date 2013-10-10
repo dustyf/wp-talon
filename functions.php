@@ -3,13 +3,10 @@
  * WP Talon functions and definitions
  *
  * @package WP Talon
- * @since WP Talon 1.0
  */
 
 /**
  * Set the content width based on the theme's design and stylesheet.
- *
- * @since WP Talon 1.0
  */
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
@@ -21,25 +18,8 @@ if ( ! function_exists( 'wp_talon_setup' ) ) :
  * Note that this function is hooked into the after_setup_theme hook, which runs
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
- *
- * @since WP Talon 1.0
  */
 function wp_talon_setup() {
-
-	/**
-	 * Custom template tags for this theme.
-	 */
-	require( get_template_directory() . '/inc/template-tags.php' );
-
-	/**
-	 * Custom functions that act independently of the theme templates
-	 */
-	require( get_template_directory() . '/inc/extras.php' );
-
-	/**
-	 * Customizer additions
-	 */
-	require( get_template_directory() . '/inc/customizer.php' );
 
 	/**
 	 * Make theme available for translation
@@ -71,6 +51,14 @@ function wp_talon_setup() {
 	 * Enable support for Post Formats
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+
+	/**
+	 * Setup the WordPress core custom background feature.
+	 */
+	add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+	) ) );
 }
 endif; // wp_talon_setup
 add_action( 'after_setup_theme', 'wp_talon_setup' );
@@ -79,7 +67,7 @@ add_action( 'after_setup_theme', 'wp_talon_setup' );
  * Enqueue scripts and styles
  */
 function wp_talon_scripts() {
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'wp-talon-style', get_stylesheet_uri() );
 
 	wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.css', array(), '20130203', 'all' );
 	wp_enqueue_style( 'normalize' );
@@ -87,7 +75,7 @@ function wp_talon_scripts() {
 	wp_register_style( 'unsemantic', get_template_directory_uri() . '/css/unsemantic-grid-responsive.css', array(), '20130204', 'all' );
 	wp_enqueue_style( 'unsemantic' );
 
-	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
+	wp_enqueue_script( 'wp-talon-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -105,6 +93,21 @@ add_action( 'wp_enqueue_scripts', 'wp_talon_scripts' );
  * Implement the Custom Header feature
  */
 //include( get_template_directory() . '/inc/custom-header.php' );
+
+/**
+ * Custom template tags for this theme.
+ */
+require( get_template_directory() . '/inc/template-tags.php' );
+
+/**
+ * Custom functions that act independently of the theme templates
+ */
+require( get_template_directory() . '/inc/extras.php' );
+
+/**
+ * Customizer additions
+ */
+require( get_template_directory() . '/inc/customizer.php' );
 
 /**
  * Include Widget Areas

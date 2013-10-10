@@ -1,8 +1,6 @@
 <?php
 /**
  * Register widgetized area and update sidebar with default widgets
- *
- * @since WP Talon 1.0
  */
 function wp_talon_widgets_init() {
 	register_sidebar( array(

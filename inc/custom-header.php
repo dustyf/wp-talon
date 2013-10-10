@@ -14,7 +14,6 @@
 
  *
  * @package WP Talon
- * @since WP Talon 1.0
  */
 
 /**
@@ -72,7 +71,6 @@ add_action( 'after_setup_theme', 'wp_talon_custom_header_setup' );
  * @return stdClass All properties represent attributes of the curent header image.
  *
  * @package WP Talon
- * @since WP Talon 1.1
  */
 
 if ( ! function_exists( 'get_custom_header' ) ) {
@@ -91,8 +89,6 @@ if ( ! function_exists( 'wp_talon_header_style' ) ) :
  * Styles the header image and text displayed on the blog
  *
  * @see wp_talon_custom_header_setup().
- *
- * @since WP Talon 1.0
  */
 function wp_talon_header_style() {
 
@@ -132,8 +128,6 @@ if ( ! function_exists( 'wp_talon_admin_header_style' ) ) :
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
  * @see wp_talon_custom_header_setup().
- *
- * @since WP Talon 1.0
  */
 function wp_talon_admin_header_style() {
 ?>
@@ -162,8 +156,6 @@ if ( ! function_exists( 'wp_talon_admin_header_image' ) ) :
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
  * @see wp_talon_custom_header_setup().
- *
- * @since WP Talon 1.0
  */
 function wp_talon_admin_header_image() { ?>
 	<div id="headimg">

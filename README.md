@@ -10,10 +10,11 @@ Custom starter theme based on _s
 
 Bits and pieces stolen from:
 * HTML5 Boilerplate - http://html5boilerplate.com/
-* Unsemantic CSS Grid System - http://unsemantic.com/
 * Aaron Holbrook's (@aaronjholbrook) starter theme, Blue-Ox - https://github.com/AaronHolbrook/Blue-Ox
 * Brad Parbs's (@bradparbs) stater theme, Wolf - https://github.com/bradp/Wolf
 * Theme Hook Alliance - https://github.com/zamoose/themehookalliance
+* Zurb Foundation - http://foundation.zurb.com/
+* WP-Foundation Theme - http://320press.com/wp-foundation/
 
 ## License ##
 

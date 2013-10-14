@@ -1,10 +1,16 @@
 <?php
 /**
+ * WP Talon Script and Style Enqueue.
+ *
+ * @package WP Talon
+ */
+
+/**
  * Enqueue scripts and styles
  */
 function wp_talon_scripts() {
 	global $post;
-	
+
 	wp_enqueue_style( 'wp-talon-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'jquery' );
@@ -30,3 +36,15 @@ function wp_talon_scripts() {
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr-2.6.2.min.js', array(), '20130202' );
 }
 add_action( 'wp_enqueue_scripts', 'wp_talon_scripts' );
+
+function wp_talon_script_functions() { ?>
+
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
+        $(document).foundation();
+    });     
+    </script>
+
+<?php
+}
+add_action('wp_footer','wp_talon_script_functions',30);

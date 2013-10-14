@@ -108,3 +108,7 @@ include( get_template_directory() . '/inc/custom-fields.php' );
  */
 include( get_template_directory() . '/inc/tha-theme-hooks.php' );
 
+/**
+ * Include Theme Hook Alliance
+ */
+include( get_template_directory() . '/inc/foundation-shortcodes.php' );

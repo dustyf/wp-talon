@@ -72,6 +72,9 @@ function wp_talon_scripts() {
 	wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.css', array(), '20130203', 'all' );
 	wp_enqueue_style( 'normalize' );
 
+	wp_register_style( 'foundation', get_template_directory_uri() . '/css/foundation.min.css', array(), '20131013', 'all' );
+	wp_enqueue_style( 'foundation' );
+
 	wp_enqueue_script( 'wp-talon-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

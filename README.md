@@ -4,7 +4,7 @@ Custom starter theme based on _s
 
 ## Version ##
 
-1.1
+1.1.1
 
 ## Credits ##
 

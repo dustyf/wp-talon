@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Dustin Filippini
 Author URI: http://dustyf.com
 Description: A custom starter theme based on _s
-Version: 1.1
+Version: 1.1.1
 License: GNU General Public License
 License URI: license.txt
 Tags:
@@ -95,16 +95,26 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 /*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
+ * Clearfix
  */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
+}
 
 
 
@@ -119,7 +129,6 @@ textarea {
 	color: #404040;
 	font-family: sans-serif;
 	font-size: 16px;
-	font-size: 1.6rem;
 	line-height: 1.5;
 }
 
@@ -579,6 +588,14 @@ object {
 }
 
 /* ==========================================================================
+   Custom CSS.
+   Add any base custom CSS here.  Add Media Queries below.
+   ========================================================================== */
+
+
+
+
+/* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
@@ -650,4 +667,53 @@ object {
     }
 }
 
+/* ==========================================================================
+   Media Queries.
+   Use these to target specific screen sizes and devices.
+   ========================================================================== */
 
+/* We use this media query to add styles to any device that supports media queries */
+@media only screen {
+
+}
+
+/* Used to alter styles for screens less than 480px wide. Smartphones and mobile devices. */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* Used to alter styles for screens less than 768px wide. Tables and mobile devices. */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Used to alter styles for screens at least 1280px wide. */
+@media only screen and (min-width: 1280px) {
+
+}
+
+/* Used to alter styles for screens at least 1440px wide. */
+@media only screen and (min-width: 1440px) {
+
+}
+
+/* Apply styles to screens in landscape orientation */
+@media only screen and (orientation: landscape) {
+
+}
+
+/* Apply styles to screens in portrait orientation */
+@media only screen and (orientation: portrait) {
+
+}
+
+/* We also use Modernizr to add a .touch class to the body when applicable */
+/* You can prepend this class to anything and it will style only for touch devices */
+.touch .your-element {
+
+}

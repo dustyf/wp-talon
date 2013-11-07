@@ -46,8 +46,8 @@
 		</div>
 
 		<nav id="site-navigation" role="navigation" class="site-navigation main-navigation">
-			<h1 class="assistive-text"><?php _e( 'Menu', 'wp_talon' ); ?></h1>
-			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'wp_talon' ); ?>"><?php _e( 'Skip to content', 'wp_talon' ); ?></a></div>
+			<h3 class="menu-toggle"><?php _e( 'Menu', '_s' ); ?></h1>
+            <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- .site-navigation .main-navigation -->

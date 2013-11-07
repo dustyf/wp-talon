@@ -11,15 +11,9 @@
 function wp_talon_scripts() {
 	global $post;
 
-	wp_enqueue_style( 'wp-talon-style', get_stylesheet_uri() );
+	// Enqueue Scripts
 
 	wp_enqueue_script( 'jquery' );
-
-	wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.css', array(), '20130203', 'all' );
-	wp_enqueue_style( 'normalize' );
-
-	wp_register_style( 'foundation', get_template_directory_uri() . '/css/foundation.min.css', array(), '20131013', 'all' );
-	wp_enqueue_style( 'foundation' );
 
 	wp_enqueue_script( 'wp-talon-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -34,6 +28,19 @@ function wp_talon_scripts() {
 	}
 
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr-2.6.2.min.js', array(), '20130202' );
+
+	// Enqueue Styles
+
+	wp_register_style( 'reset', get_template_directory_uri() . '/css/reset.css', array(), '20131107', 'all' );
+	wp_enqueue_style( 'reset' );
+
+	wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.css', array(), '20130203', 'all' );
+	wp_enqueue_style( 'normalize' );
+
+	wp_register_style( 'foundation', get_template_directory_uri() . '/css/foundation.min.css', array(), '20131013', 'all' );
+	wp_enqueue_style( 'foundation' );
+
+	wp_enqueue_style( 'wp-talon-style', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'wp_talon_scripts' );
 
